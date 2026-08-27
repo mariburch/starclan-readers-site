@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Book Ideas - Star Clan Readers</title>
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="./index.html">Home</a>
+  <a href="./rules.html">Rules</a>
+  <a href="./list.html">List</a>
+  <a href="./new-ideas.html" class="is-active">New Ideas</a>
+</nav>
+
+<header class="page-header">
+  <h1 class="page-title wordmark-shadow">Submit a New Book Idea</h1>
+</header>
+
+<section class="section idea-section">
+  <div class="idea-row">
+    <img class="idea-decor idea-decor-left" src="./assets/book and stars graphic.png" alt="">
+
+    <div class="idea-card">
+      <h2 class="idea-heading">What book do you want to add to the next wheel<span class="glyph-fallback">?</span></h2>
+
+      <form id="idea-form" class="idea-form" action="https://docs.google.com/forms/d/e/1FAIpQLScv34PoHxXZSf96u7CfLi_5I5OXSOCcN_AXNgDkW05CUPBPjg/formResponse" method="POST" target="idea-form-target">
+        <label class="form-label" for="idea-title">Title and<span class="glyph-fallback">/</span>or Author</label>
+        <input class="form-input" type="text" id="idea-title" name="entry.2136451628" autocomplete="off">
+
+        <label class="form-label" for="idea-name">Name</label>
+        <input class="form-input" type="text" id="idea-name" name="entry.621353870" autocomplete="off">
+
+        <button class="form-submit" type="submit">Submit</button>
+      </form>
+
+      <div id="idea-success" class="idea-success" hidden>
+        <p>Thanks<span class="glyph-fallback">!</span> Auntie Mari will see your idea.</p>
+      </div>
+    </div>
+
+    <img class="idea-decor idea-decor-right" src="./assets/lightbulb graphic.png" alt="">
+  </div>
+
+  <iframe name="idea-form-target" class="idea-form-target" title="submission"></iframe>
+
+  <a class="return-button" href="./index.html" aria-label="Back to home">
+    <img src="./assets/return button.png" alt="">
+  </a>
+</section>
+
+<script>
+  var form = document.getElementById('idea-form');
+  var success = document.getElementById('idea-success');
+  var targetFrame = document.querySelector('iframe[name="idea-form-target"]');
+  var submitted = false;
+
+  form.addEventListener('submit', function () {
+    submitted = true;
+  });
+
+  targetFrame.addEventListener('load', function () {
+    if (!submitted) return;
+    form.hidden = true;
+    success.hidden = false;
+  });
+</script>
+
+</body>
+</html>

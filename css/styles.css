@@ -1,0 +1,1056 @@
+/* ===== Fonts (self-hosted, no network) ===== */
+@font-face {
+  font-family: 'Cubao';
+  src: url('../assets/Cubao_Free_Narrow.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sergio Trendy';
+  src: url('../assets/Sergio Trendy.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Childos';
+  src: url('../assets/ChildosArabicDEMO-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== Design tokens ===== */
+:root {
+  --bg: #292929;
+  --pink: #fc89b2;
+  --card: #dfc4ce;
+  --ink: #0f341c;
+  --white: #ffffff;
+  --muted: #9a9a9a;
+
+  --font-display: 'Cubao', 'Arial Black', sans-serif;
+  --font-body: 'Sergio Trendy', Georgia, serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.wordmark-shadow {
+  text-shadow: 3px 4px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Nav ===== */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px 28px;
+  padding: calc(env(safe-area-inset-top) + 20px) max(24px, env(safe-area-inset-right)) 20px max(24px, env(safe-area-inset-left));
+}
+
+.site-nav a {
+  font-family: var(--font-body);
+  font-weight: normal;
+  font-size: 20px;
+  color: var(--muted);
+  padding: 10px 6px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-nav a.is-active {
+  color: var(--white);
+}
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  padding: 8px 24px 40px;
+}
+
+.hero .eyebrow {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(22px, 4.5vw, 34px);
+  letter-spacing: 0.5px;
+  margin: 0 0 4px;
+}
+
+.hero .the {
+  font-family: var(--font-body);
+  color: var(--white);
+  font-size: clamp(20px, 4vw, 28px);
+  margin: 0 0 clamp(-2px, -0.5vw, 5px);
+}
+
+.hero .wordmark {
+  position: relative;
+  display: inline-block;
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(56px, 16vw, 128px);
+  line-height: 0.72;
+  margin: 0;
+}
+
+.hero .wordmark span {
+  display: block;
+}
+
+.hero .sparkle {
+  position: absolute;
+  top: -11%;
+  right: -14%;
+  width: clamp(28px, 6vw, 48px);
+  height: auto;
+}
+
+.hero .readers {
+  font-family: var(--font-body);
+  color: var(--white);
+  font-size: clamp(28px, 6vw, 44px);
+  margin: clamp(-22px, -4vw, -10px) 0 0;
+}
+
+/* ===== Section headings ===== */
+.section {
+  padding: 24px 24px 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(28px, 6vw, 44px);
+  text-align: center;
+  margin: 0 0 32px;
+}
+
+/* ===== Members ===== */
+.members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.member-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+}
+
+.member-avatar {
+  width: clamp(84px, 20vw, 120px);
+  height: clamp(84px, 20vw, 120px);
+  border-radius: 50%;
+}
+
+.member-name {
+  font-family: var(--font-body);
+  color: var(--pink);
+  font-weight: bold;
+  font-size: 19px;
+  text-align: center;
+}
+
+/* ===== Book of the week ===== */
+.book-of-week {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.book-of-week-frame {
+  position: relative;
+  width: clamp(220px, 55vw, 300px);
+  aspect-ratio: 1 / 1.12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-of-week-frame img.shape {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.book-of-week-frame img.cover {
+  position: relative;
+  z-index: 1;
+  width: 58%;
+  border-radius: 6px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.book-of-week-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.book-of-week-title {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(22px, 4.5vw, 30px);
+  margin: 0;
+}
+
+.book-of-week-authors {
+  font-family: 'Childos', var(--font-body);
+  font-weight: bold;
+  color: var(--pink);
+  font-size: 19px;
+  margin: -12px 0 0;
+}
+
+/* Sergio Trendy's punctuation glyphs (& ' / ? ! : ; - ( ) " 0 etc.) are
+   corrupted placeholder shapes in this font file, not missing outlines,
+   so the browser can't auto-fallback. Cubao has clean glyphs for these
+   and blends acceptably at body-text size. */
+.glyph-fallback {
+  font-family: 'Cubao', sans-serif;
+}
+
+/* ===== Page header (non-home pages) ===== */
+.page-header {
+  padding: 8px 24px 8px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(32px, 8vw, 56px);
+  margin: 0;
+}
+
+/* ===== Rules ===== */
+.rule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.rule-card {
+  display: flex;
+  align-items: stretch;
+  background: var(--card);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.rule-number {
+  flex-shrink: 0;
+  width: clamp(78px, 19vw, 112px);
+  background: #000000;
+  color: var(--pink);
+  font-family: var(--font-display);
+  font-size: clamp(60px, 13.5vw, 82px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rule-content {
+  padding: 22px 28px;
+  color: var(--ink);
+}
+
+.rule-title {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+}
+
+.rule-dash {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 6px 0 10px;
+}
+
+.rule-text {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== Book grid (Reading List) ===== */
+.section-wide {
+  max-width: 1100px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+}
+
+.book-grid a {
+  display: block;
+  border-radius: 8px;
+}
+
+.book-grid img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.return-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(56px, 12vw, 72px);
+  height: clamp(56px, 12vw, 72px);
+  margin: 40px auto 0;
+}
+
+.return-button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* ===== Menu ===== */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  background: #000000;
+  border-radius: 999px;
+  min-height: 56px;
+  padding-right: 20px;
+  gap: 14px;
+}
+
+.menu-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+}
+
+.menu-icon.icon-rules { background-image: url('../assets/Menu button Rules.png'); }
+.menu-icon.icon-list { background-image: url('../assets/Menu button readinglist.png'); }
+.menu-icon.icon-spinner { background-image: url('../assets/Menu button spinner.png'); }
+.menu-icon.icon-idea { background-image: url('../assets/newbookidea button.png'); }
+
+.menu-label {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--pink);
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+/* ===== New Book Idea form ===== */
+.idea-section {
+  max-width: 900px;
+}
+
+.idea-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.idea-decor {
+  display: block;
+  width: clamp(60px, 14vw, 100px);
+  height: auto;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.idea-decor-left {
+  margin-bottom: 20px;
+}
+
+.idea-decor-right {
+  width: clamp(90px, 20vw, 150px);
+  margin-top: 20px;
+}
+
+.idea-card {
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 28px;
+  padding: 32px 28px;
+  max-width: 560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .idea-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .idea-decor {
+    margin: 0;
+  }
+
+  .idea-decor-left {
+    width: auto;
+    height: 100%;
+  }
+
+  .idea-decor-right {
+    align-self: center;
+    width: clamp(110px, 13vw, 240px);
+  }
+
+  .idea-card {
+    max-width: 480px;
+  }
+}
+
+.idea-heading {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: clamp(24px, 5vw, 30px);
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 0 28px;
+}
+
+.idea-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.idea-form[hidden] {
+  display: none;
+}
+
+.form-label {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  /* Plain system font, not Sergio Trendy: users type arbitrary text here
+     and Sergio Trendy's punctuation glyphs can't be patched character-by-
+     character the way static copy can. */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--card);
+  border: 2px solid rgba(15, 52, 28, 0.4);
+  border-radius: 8px;
+  padding: 14px 16px;
+  min-height: 52px;
+  margin-bottom: 24px;
+}
+
+.form-input:focus {
+  outline: 3px solid var(--pink);
+  outline-offset: 2px;
+}
+
+.form-submit {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--ink);
+  background: var(--pink);
+  border: none;
+  border-radius: 999px;
+  min-height: 56px;
+  cursor: pointer;
+}
+
+.idea-success {
+  text-align: center;
+}
+
+.idea-success p {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0;
+}
+
+.idea-form-target {
+  display: none;
+}
+
+/* ===== Book Spinner ===== */
+.spinner-subtitle {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--pink);
+  font-size: clamp(18px, 3vw, 22px);
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+.spinner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 560px;
+}
+
+.wheel-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 12px 0 28px;
+}
+
+.wheel-wrap canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 26px solid var(--bg);
+  z-index: 2;
+}
+
+.spin-btn {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 32px;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 24px;
+  padding: 28px 24px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.book-info[hidden] {
+  display: none;
+}
+
+.book-info-cover {
+  width: clamp(130px, 40vw, 170px);
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+.book-info-text {
+  text-align: center;
+}
+
+.book-info-title {
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: clamp(22px, 5vw, 28px);
+  margin: 0 0 6px;
+}
+
+.book-info-author {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 19px;
+  margin: 0 0 4px;
+}
+
+.book-info-series {
+  font-family: var(--font-body);
+  font-size: 16px;
+  opacity: 0.75;
+  margin: 0 0 14px;
+}
+
+.book-info-synopsis {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  animation-name: confetti-fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* ===== Responsive ===== */
+
+@media (min-width: 700px) {
+  .book-info {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .book-info-text {
+    text-align: left;
+  }
+}
+
+@media (min-width: 700px) {
+  .menu-grid {
+    max-width: 680px;
+  }
+}
+
+@media (orientation: landscape) {
+  .hero {
+    padding-top: 4px;
+    padding-bottom: 28px;
+  }
+}
+
+/* ===== Member profile pages ===== */
+.profile-hero {
+  padding: 8px 24px 36px;
+}
+
+.profile-hero-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-hero .hi {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(28px, 6vw, 40px);
+  margin: 0;
+}
+
+.profile-hero .profile-name {
+  font-family: var(--font-display);
+  color: var(--pink);
+  font-size: clamp(36px, 8vw, 56px);
+  margin: 4px 0 0;
+}
+
+.profile-hero-photo {
+  width: clamp(220px, 45vw, 380px);
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .profile-hero-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    text-align: left;
+  }
+
+  .profile-hero-text {
+    flex: 0 1 auto;
+    width: max-content;
+    max-width: 100%;
+  }
+
+  .profile-hero .hi {
+    font-size: clamp(32px, 4.2vw, 48px);
+  }
+
+  .profile-hero .profile-name {
+    font-size: clamp(56px, 7.5vw, 88px);
+  }
+
+  .profile-hero-photo {
+    flex: 0 0 auto;
+    width: clamp(260px, 26vw, 380px);
+    margin: 0;
+  }
+}
+
+.profile-band {
+  width: 100%;
+  background: var(--card);
+  color: var(--ink);
+  padding: 40px 24px;
+}
+
+.profile-band.is-dark {
+  background: var(--bg);
+  color: var(--white);
+}
+
+.profile-band-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-passion-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 28px 40px;
+}
+
+.profile-passion-photo-wrap {
+  flex: 0 0 auto;
+  text-align: center;
+  max-width: 220px;
+}
+
+.profile-passion-photo-wrap img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.profile-passion-caption {
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.profile-passion-text {
+  flex: 1 1 320px;
+  min-width: 260px;
+  text-align: center;
+}
+
+.profile-passion-heading {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.05;
+  margin: 0 0 16px;
+}
+
+.profile-passion-body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.profile-books-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.profile-books-collage {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.profile-other-heading {
+  text-align: center;
+  color: var(--pink);
+  margin-bottom: 28px;
+}
+
+.profile-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #000000;
+  border-radius: 16px;
+  padding: 14px 20px 14px 14px;
+  min-height: 88px;
+}
+
+.profile-card-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+}
+
+.profile-card-heading {
+  font-family: var(--font-body);
+  font-weight: bold;
+  color: var(--white);
+  font-size: 19px;
+  margin: 0 0 4px;
+}
+
+.profile-card-body {
+  font-family: var(--font-body);
+  color: var(--white);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.profile-return {
+  padding-top: 8px;
+}
+
+/* ===== Book detail pages ===== */
+.book-detail-section {
+  max-width: 900px;
+}
+
+.book-detail-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  border-radius: 28px;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.book-detail-cover-wrap {
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-detail-cover {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  border-radius: 4px;
+}
+
+.book-detail-content {
+  padding: 28px 28px 34px;
+  color: var(--ink);
+  text-align: center;
+}
+
+.book-detail-title {
+  font-family: var(--font-display);
+  color: #000000;
+  text-shadow: 3px 4px 0 var(--pink);
+  font-size: clamp(28px, 6vw, 42px);
+  line-height: 1.05;
+  margin: 0 0 14px;
+}
+
+.book-detail-author {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 22px;
+  margin: 0 0 4px;
+}
+
+.book-detail-dash {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 10px 0 16px;
+}
+
+.book-detail-series {
+  font-family: var(--font-body);
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 18px;
+}
+
+.book-detail-synopsis {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  .book-detail-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .book-detail-cover-wrap {
+    flex: 0 0 38%;
+    padding: 28px;
+  }
+
+  .book-detail-cover {
+    max-width: 100%;
+  }
+
+  .book-detail-content {
+    flex: 1 1 auto;
+    padding: 36px 40px;
+  }
+}
+
+/* ===== Book comments ===== */
+.comments-section {
+  max-width: 700px;
+}
+
+#comments-root {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.comment-item {
+  background: var(--card);
+  color: var(--ink);
+  border-radius: 14px;
+  padding: 14px 20px;
+}
+
+.comment-name {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+.comment-text {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.comment-empty {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--white);
+  opacity: 0.7;
+  text-align: center;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-textarea {
+  resize: vertical;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book Spinner - Star Clan Readers</title>
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="./index.html">Home</a>
+  <a href="./rules.html">Rules</a>
+  <a href="./list.html">List</a>
+  <a href="./new-ideas.html">New Ideas</a>
+</nav>
+
+<header class="page-header">
+  <h1 class="page-title wordmark-shadow">Book Picker Wheel</h1>
+  <p class="spinner-subtitle">Click the wheel to pick your next read<span class="glyph-fallback">!</span></p>
+</header>
+
+<section class="section spinner-section">
+  <div class="wheel-wrap">
+    <div class="wheel-pointer" aria-hidden="true"></div>
+    <canvas id="wheel" width="380" height="380"></canvas>
+  </div>
+
+  <button id="spin-btn" class="form-submit spin-btn" type="button">Spin the Wheel<span class="glyph-fallback">!</span></button>
+
+  <div id="book-info" class="book-info" hidden>
+    <img id="book-cover" class="book-info-cover" src="" alt="">
+    <div class="book-info-text">
+      <h2 id="book-title" class="book-info-title"></h2>
+      <p id="book-author" class="book-info-author"></p>
+      <p id="book-series" class="book-info-series"></p>
+      <p id="book-synopsis" class="book-info-synopsis"></p>
+    </div>
+  </div>
+
+  <a class="return-button" href="./index.html" aria-label="Back to home">
+    <img src="./assets/return button.png" alt="">
+  </a>
+</section>
+
+<script src="./js/book-spinner.js"></script>
+
+</body>
+</html>
