@@ -1,64 +1,48 @@
 (function () {
   'use strict';
 
-  // Same 30 titles/order as list.html (book 1.png ... book 30.png), with
+  // Same 30 titles/order as list.html (book 1.jpg ... book 30.jpg), with
   // author/series/synopsis pulled from the book club's own picker-wheel data.
   var BOOKS = [
-    { title: "Alcatraz vs. the Evil Librarians", author: "Brandon Sanderson", series: "Book 1 of 6", cover: "book 1.png",
-      synopsis: "On his 13th birthday, foster kid Alcatraz learns his ability to break things is actually a superpower, and Evil Librarians secretly rule the world." },
-    { title: "Ender's Game", author: "Orson Scott Card", series: "Standalone", cover: "book 2.png",
-      synopsis: "Child prodigy Ender Wiggin is sent to an orbital Battle School, where he is manipulated through zero-gravity tactical games to become the commander Earth needs to defeat an insectoid alien threat." },
-    { title: "The Last Dragon on Mars", author: "Scott Reintgen", series: "Book 1 of 2", cover: "book 3.png",
+    { title: "The Last Dragon on Mars", author: "Scott Reintgen", series: "Book 1 of 2", cover: "book 3.jpg",
       synopsis: "Young Martian salvager Lunar Jones discovers a dormant dragon in a restricted zone that bonds with him, launching him into a conflict spanning the solar system." },
-    { title: "Amari and the Night Brothers", author: "B.B. Alston", series: "Book 1 of 5", cover: "book 4.png",
+    { title: "Amari and the Night Brothers", author: "B.B. Alston", series: "Book 1 of 5", cover: "book 4.jpg",
       synopsis: "Thirteen-year-old Amari Peters discovers a secret world of magic and monsters while searching for her missing brother, joining the Bureau of Supernatural Affairs." },
-    { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", series: "Book 1 of 6", cover: "book 5.png",
+    { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", series: "Book 1 of 6", cover: "book 5.jpg",
       synopsis: "Minutes before Earth is demolished for a hyperspace bypass, Arthur Dent is rescued by his friend Ford Prefect, a secret alien researcher, beginning a wild galactic adventure." },
-    { title: "Fablehaven", author: "Brandon Mull", series: "Book 1 of 5", cover: "book 7.png",
-      synopsis: "Siblings Kendra and Seth discover their grandparents are caretakers of a secret sanctuary for mythical creatures. When rules are broken and grandparents captured, the siblings must save everyone." },
-    { title: "The Lion of Mars", author: "Jennifer L. Holm", series: "Standalone", cover: "book 8.png",
+    { title: "The Lion of Mars", author: "Jennifer L. Holm", series: "Standalone", cover: "book 8.jpg",
       synopsis: "Eleven-year-old Bell has lived his whole life in an isolated US colony on Mars. When a mysterious virus incapacitates all the adults, Bell and the other kids must break rules, contact foreign settlements, and unite to save their community." },
-    { title: "The Lost Library", author: "Rebecca Stead & Wendy Mass", series: "Standalone", cover: "book 9.png",
+    { title: "The Lost Library", author: "Rebecca Stead & Wendy Mass", series: "Standalone", cover: "book 9.jpg",
       synopsis: "When a mysterious free little library appears in town, 11-year-old Evan takes two books that spark a quest to solve a long-ago library fire." },
-    { title: "The Goose Girl", author: "Shannon Hale", series: "Book 1 of 4", cover: "book 10.png",
+    { title: "The Goose Girl", author: "Shannon Hale", series: "Book 1 of 4", cover: "book 10.jpg",
       synopsis: "Princess Ani can speak to birds but struggles with human expectations. Betrayed on her journey, her identity is stolen by her lady-in-waiting, forcing Ani to hide as a humble goose girl." },
-    { title: "The Screaming Staircase", author: "Jonathan Stroud", series: "Book 1 of 5", cover: "book 12.png",
-      synopsis: "In a London plagued by deadly ghosts only teenagers can see, psychic Lucy Carlyle joins Lockwood & Co., a small independent agency taking on a terrifying haunted house case." },
-    { title: "The Beast Player", author: "Nahoko Uehashi", series: "Book 1 of 2", cover: "book 13.png",
+    { title: "The Beast Player", author: "Nahoko Uehashi", series: "Book 1 of 2", cover: "book 13.jpg",
       synopsis: "Elin grows up caring for fierce water serpents used in war. After her mother is executed, Elin escapes and develops a unique connection with Royal Beasts, winged apex predators." },
-    { title: "The Wild Robot", author: "Peter Brown", series: "Book 1 of 3", cover: "book 14.png",
+    { title: "The Wild Robot", author: "Peter Brown", series: "Book 1 of 3", cover: "book 14.jpg",
       synopsis: "Intelligent robot Roz washes ashore on a remote island. To survive, she must observe and mimic local wildlife, learn animal communication, and adopt an orphaned gosling." },
-    { title: "Impossible Creatures", author: "Katherine Rundell", series: "Book 1 of 3", cover: "book 15.png",
+    { title: "Impossible Creatures", author: "Katherine Rundell", series: "Book 1 of 3", cover: "book 15.jpg",
       synopsis: "Christopher discovers a portal to the Archipelago, hidden islands where mythic beasts live. He teams up with Mal, a girl who can fly, to embark on a dangerous quest." },
-    { title: "Star in the Forest", author: "Laura Resau", series: "Standalone", cover: "book 16.png",
+    { title: "Star in the Forest", author: "Laura Resau", series: "Standalone", cover: "book 16.jpg",
       synopsis: "When 11-year-old Zitlally's father is arrested and deported to Mexico, her family attempts to bring him back, only to learn he has been kidnapped for ransom. Seeking comfort, Zitlally rescues a stray white dog with a star-shaped patch over its eye, and becomes convinced that keeping Star safe will help her father find his way back home." },
-    { title: "The Millicent Quibb School of Etiquette for Young Ladies of Mad Science", author: "Kate McKinnon", series: "Book 1 of 3", cover: "book 17.png",
+    { title: "The Millicent Quibb School of Etiquette for Young Ladies of Mad Science", author: "Kate McKinnon", series: "Book 1 of 3", cover: "book 17.jpg",
       synopsis: "In 1911, three eccentric sisters expelled from etiquette school are recruited by mad scientist Millicent Quibb to stop a villainous plot involving giant mutant worms." },
-    { title: "The Legend of Greg", author: "Chris Rylander", series: "Book 1 of 3", cover: "book 18.png",
+    { title: "The Legend of Greg", author: "Chris Rylander", series: "Book 1 of 3", cover: "book 18.jpg",
       synopsis: "Thirteen-year-old Greg Belmont leads an ordinary life until his dad is kidnapped by a troll and he learns he is actually a dwarf, pulled into a hidden underground world of monsters and magic." },
-    { title: "The Planet, the Portal, and a Pizza", author: "Wendy Mass and Nora Raleigh Baskin", series: "Standalone", cover: "book 19.png",
-      synopsis: "A teenage pizza delivery driver stumbles into a mysterious portal and is transported across the galaxy on a sci-fi adventure, delivering pizzas to strange alien worlds." },
-    { title: "Airman", author: "Eoin Colfer", series: "Standalone", cover: "book 20.png",
-      synopsis: "In the 1890s, 14-year-old Conor Broekhart is framed for the King's murder. Imprisoned in a brutal mine, Conor uses his mechanical genius to secretly design a flying machine to escape." },
-    { title: "The Maze Runner", author: "James Dashner", series: "Book 1 of 6", cover: "book 21.png",
+    { title: "The Maze Runner", author: "James Dashner", series: "Book 1 of 6", cover: "book 21.jpg",
       synopsis: "Thomas wakes in an elevator with no memory and arrives in the Glade, a courtyard surrounded by massive shifting walls. He must become a Runner to find escape." },
-    { title: "Unsouled", author: "Will Wight", series: "Book 1 of 12", cover: "book 22.png",
-      synopsis: "Young Lindon is declared Unsouled, deemed inherently weak. When a heavenly vision foretells his home's destruction, Lindon uses cunning and determination to rise beyond his limitations." },
-    { title: "TBH, This Is SO Awkward", author: "Lisa Greenwald", series: "Book 1 of 8", cover: "book 23.png",
+    { title: "TBH, This Is SO Awkward", author: "Lisa Greenwald", series: "Book 1 of 8", cover: "book 23.jpg",
       synopsis: "Told entirely through text messages and emojis, middle schoolers navigate social dynamics, cyber-drama, and shifting friendships." },
-    { title: "The Rithmatist", author: "Brandon Sanderson", series: "Book 1 of 2", cover: "book 24.png",
+    { title: "The Rithmatist", author: "Brandon Sanderson", series: "Book 1 of 2", cover: "book 24.jpg",
       synopsis: "In an alternate steampunk America, Joel is a non-magical student obsessed with Rithmatics, the art of bringing 2D chalk drawings to life. When students begin disappearing, Joel investigates." },
-    { title: "Inkheart", author: "Cornelia Funke", series: "Book 1 of 4", cover: "book 25.png",
+    { title: "Inkheart", author: "Cornelia Funke", series: "Book 1 of 4", cover: "book 25.jpg",
       synopsis: "Twelve-year-old Meggie's father Mo can read book characters into the real world. When the villain Capricorn captures Mo, Meggie must find her own courage." },
-    { title: "The Thief of Always", author: "Clive Barker", series: "Standalone", cover: "book 26.png",
-      synopsis: "Bored ten-year-old Harvey Swick is lured to the magical Holiday House, where every day cycles through spring, summer, Halloween, and Christmas. Harvey soon learns the house is a parasitic trap stealing children's time." },
-    { title: "Please Pay Attention", author: "Jamie Sumner", series: "Standalone", cover: "book 27.png",
+    { title: "Please Pay Attention", author: "Jamie Sumner", series: "Standalone", cover: "book 27.jpg",
       synopsis: "After a frightening lockdown drill at her middle school, sixth-grader Bea, who has cerebral palsy, must navigate the aftermath and find healing." },
     { title: "Three Keys", author: "Kelly Yang", series: "Front Desk Book 2 of 6", cover: "three keys.png",
       synopsis: "Sixth-grader Mia Tang thinks she is set for the best year ever. Her family now proudly owns the Calivista Motel, she runs the front desk with her best friend Lupe, and her writing skills are improving." },
     { title: "The Runaway King", author: "Jennifer A. Nielsen", series: "Book 2 of 5", cover: "the runaway king.png",
       synopsis: "Just weeks after Jaron has taken the throne, an assassination attempt forces him into a deadly situation. Rumors of a coming war are winding their way between the castle walls, and Jaron feels the pressure quietly mounting within Carthya." },
-    { title: "Riding Freedom", author: "Pam Munoz Ryan", series: "Standalone", cover: "book 30.png",
+    { title: "Riding Freedom", author: "Pam Munoz Ryan", series: "Standalone", cover: "book 30.jpg",
       synopsis: "Orphaned as a toddler and raised in a boys' orphanage, Charlotte Parkhurst discovers an exceptional talent for horses. She disguises herself as a boy named Charley to pursue her dream of driving stagecoaches, becoming a legendary driver and secretly the first woman to vote in a U.S. election." }
   ];
 
@@ -76,12 +60,11 @@
   // Since this copy is data-driven, patch it automatically instead of by hand.
   var BROKEN_GLYPHS = /[&'‘’"“”/?!:;\-—()0%*+@#]/g;
 
-  function escapeHtml(str) {
-    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  }
-
   function patchGlyphs(str) {
-    return escapeHtml(str).replace(BROKEN_GLYPHS, function (ch) {
+    // Note: not html-escaping first. None of this data contains literal
+    // < or > and the fallback span wrapping needs to see the raw & to
+    // patch it correctly, otherwise escaping first would double it up.
+    return str.replace(BROKEN_GLYPHS, function (ch) {
       return '<span class="glyph-fallback">' + ch + '</span>';
     });
   }
