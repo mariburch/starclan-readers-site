@@ -342,6 +342,15 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 16px;
+  margin-bottom: 16px;
+}
+
+.book-grid:last-of-type {
+  margin-bottom: 0;
+}
+
+.finished-heading {
+  margin-top: 40px;
 }
 
 .book-grid a {
