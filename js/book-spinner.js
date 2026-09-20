@@ -4,8 +4,6 @@
   // Same 30 titles/order as list.html (book 1.jpg ... book 30.jpg), with
   // author/series/synopsis pulled from the book club's own picker-wheel data.
   var BOOKS = [
-    { title: "The Last Dragon on Mars", author: "Scott Reintgen", series: "Book 1 of 2", cover: "book 3.jpg",
-      synopsis: "Young Martian salvager Lunar Jones discovers a dormant dragon in a restricted zone that bonds with him, launching him into a conflict spanning the solar system." },
     { title: "Amari and the Night Brothers", author: "B.B. Alston", series: "Book 1 of 5", cover: "book 4.jpg",
       synopsis: "Thirteen-year-old Amari Peters discovers a secret world of magic and monsters while searching for her missing brother, joining the Bureau of Supernatural Affairs." },
     { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", series: "Book 1 of 6", cover: "book 5.jpg",
@@ -24,8 +22,6 @@
       synopsis: "Christopher discovers a portal to the Archipelago, hidden islands where mythic beasts live. He teams up with Mal, a girl who can fly, to embark on a dangerous quest." },
     { title: "Star in the Forest", author: "Laura Resau", series: "Standalone", cover: "book 16.jpg",
       synopsis: "When 11-year-old Zitlally's father is arrested and deported to Mexico, her family attempts to bring him back, only to learn he has been kidnapped for ransom. Seeking comfort, Zitlally rescues a stray white dog with a star-shaped patch over its eye, and becomes convinced that keeping Star safe will help her father find his way back home." },
-    { title: "The Millicent Quibb School of Etiquette for Young Ladies of Mad Science", author: "Kate McKinnon", series: "Book 1 of 3", cover: "book 17.jpg",
-      synopsis: "In 1911, three eccentric sisters expelled from etiquette school are recruited by mad scientist Millicent Quibb to stop a villainous plot involving giant mutant worms." },
     { title: "The Legend of Greg", author: "Chris Rylander", series: "Book 1 of 3", cover: "book 18.jpg",
       synopsis: "Thirteen-year-old Greg Belmont leads an ordinary life until his dad is kidnapped by a troll and he learns he is actually a dwarf, pulled into a hidden underground world of monsters and magic." },
     { title: "The Maze Runner", author: "James Dashner", series: "Book 1 of 6", cover: "book 21.jpg",
