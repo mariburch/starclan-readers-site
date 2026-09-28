@@ -1079,3 +1079,16 @@ body {
   resize: vertical;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+/* Two books of the week side by side (stacks on narrow screens) */
+.book-of-week-pair {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+}
+
+.book-of-week-pair .book-of-week {
+  flex: 1 1 240px;
+  max-width: 320px;
+}
