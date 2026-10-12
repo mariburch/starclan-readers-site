@@ -37,9 +37,7 @@
     { title: "Three Keys", author: "Kelly Yang", series: "Front Desk Book 2 of 6", cover: "three keys.png",
       synopsis: "Sixth-grader Mia Tang thinks she is set for the best year ever. Her family now proudly owns the Calivista Motel, she runs the front desk with her best friend Lupe, and her writing skills are improving." },
     { title: "The Runaway King", author: "Jennifer A. Nielsen", series: "Book 2 of 5", cover: "the runaway king.png",
-      synopsis: "Just weeks after Jaron has taken the throne, an assassination attempt forces him into a deadly situation. Rumors of a coming war are winding their way between the castle walls, and Jaron feels the pressure quietly mounting within Carthya." },
-    { title: "Riding Freedom", author: "Pam Munoz Ryan", series: "Standalone", cover: "book 30.jpg",
-      synopsis: "Orphaned as a toddler and raised in a boys' orphanage, Charlotte Parkhurst discovers an exceptional talent for horses. She disguises herself as a boy named Charley to pursue her dream of driving stagecoaches, becoming a legendary driver and secretly the first woman to vote in a U.S. election." }
+      synopsis: "Just weeks after Jaron has taken the throne, an assassination attempt forces him into a deadly situation. Rumors of a coming war are winding their way between the castle walls, and Jaron feels the pressure quietly mounting within Carthya." }
   ];
 
   var WEDGE_COLORS = [
