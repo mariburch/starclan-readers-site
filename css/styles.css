@@ -1092,3 +1092,13 @@ body {
   flex: 1 1 240px;
   max-width: 320px;
 }
+
+/* ===== Next Round (New Ideas page) ===== */
+.next-round-heading {
+  margin-top: 40px;
+}
+
+.next-round-grid {
+  grid-template-columns: repeat(auto-fit, 120px);
+  justify-content: center;
+}
