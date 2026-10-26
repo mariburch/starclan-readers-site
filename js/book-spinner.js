@@ -22,8 +22,6 @@
       synopsis: "Christopher discovers a portal to the Archipelago, hidden islands where mythic beasts live. He teams up with Mal, a girl who can fly, to embark on a dangerous quest." },
     { title: "Star in the Forest", author: "Laura Resau", series: "Standalone", cover: "book 16.jpg",
       synopsis: "When 11-year-old Zitlally's father is arrested and deported to Mexico, her family attempts to bring him back, only to learn he has been kidnapped for ransom. Seeking comfort, Zitlally rescues a stray white dog with a star-shaped patch over its eye, and becomes convinced that keeping Star safe will help her father find his way back home." },
-    { title: "The Legend of Greg", author: "Chris Rylander", series: "Book 1 of 3", cover: "book 18.jpg",
-      synopsis: "Thirteen-year-old Greg Belmont leads an ordinary life until his dad is kidnapped by a troll and he learns he is actually a dwarf, pulled into a hidden underground world of monsters and magic." },
     { title: "The Maze Runner", author: "James Dashner", series: "Book 1 of 6", cover: "book 21.jpg",
       synopsis: "Thomas wakes in an elevator with no memory and arrives in the Glade, a courtyard surrounded by massive shifting walls. He must become a Runner to find escape." },
     { title: "TBH, This Is SO Awkward", author: "Lisa Greenwald", series: "Book 1 of 8", cover: "book 23.jpg",
