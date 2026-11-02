@@ -35,7 +35,11 @@
     { title: "Three Keys", author: "Kelly Yang", series: "Front Desk Book 2 of 6", cover: "three keys.png",
       synopsis: "Sixth-grader Mia Tang thinks she is set for the best year ever. Her family now proudly owns the Calivista Motel, she runs the front desk with her best friend Lupe, and her writing skills are improving." },
     { title: "The Runaway King", author: "Jennifer A. Nielsen", series: "Book 2 of 5", cover: "the runaway king.png",
-      synopsis: "Just weeks after Jaron has taken the throne, an assassination attempt forces him into a deadly situation. Rumors of a coming war are winding their way between the castle walls, and Jaron feels the pressure quietly mounting within Carthya." }
+      synopsis: "Just weeks after Jaron has taken the throne, an assassination attempt forces him into a deadly situation. Rumors of a coming war are winding their way between the castle walls, and Jaron feels the pressure quietly mounting within Carthya." },
+    { title: "The Void Dragons", author: "Scott Reintgen", series: "The Dragonships Series, Book 3 of 3", cover: "the void dragons.jpg",
+      synopsis: "A year after Neptune's threat, Lunar Jones and the Dread Knights are training new riders and preparing for the Solar Summit, a gathering of planetary dragons held only once every 500 years. Then Lunar finds an abandoned ship drifting between Earth and Mars, its crew gone, and the clues point to nine creatures coming for all nine planets. Something even bigger is behind them: a black hole." },
+    { title: "The Curse of Greg", author: "Chris Rylander", series: "An Epic Series of Failures, Book 2 of 3", cover: "the curse of greg.jpg",
+      synopsis: "In this sequel to The Legend of Greg, Greg and his bloodthirsty talking ax have to keep everyone out of harm's way long enough to stop an all-out war between dwarves and elves. Will epic failure find Greg again?" }
   ];
 
   var WEDGE_COLORS = [
