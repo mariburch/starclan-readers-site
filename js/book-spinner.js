@@ -20,8 +20,6 @@
       synopsis: "Intelligent robot Roz washes ashore on a remote island. To survive, she must observe and mimic local wildlife, learn animal communication, and adopt an orphaned gosling." },
     { title: "Impossible Creatures", author: "Katherine Rundell", series: "Book 1 of 3", cover: "book 15.jpg",
       synopsis: "Christopher discovers a portal to the Archipelago, hidden islands where mythic beasts live. He teams up with Mal, a girl who can fly, to embark on a dangerous quest." },
-    { title: "Star in the Forest", author: "Laura Resau", series: "Standalone", cover: "book 16.jpg",
-      synopsis: "When 11-year-old Zitlally's father is arrested and deported to Mexico, her family attempts to bring him back, only to learn he has been kidnapped for ransom. Seeking comfort, Zitlally rescues a stray white dog with a star-shaped patch over its eye, and becomes convinced that keeping Star safe will help her father find his way back home." },
     { title: "The Maze Runner", author: "James Dashner", series: "Book 1 of 6", cover: "book 21.jpg",
       synopsis: "Thomas wakes in an elevator with no memory and arrives in the Glade, a courtyard surrounded by massive shifting walls. He must become a Runner to find escape." },
     { title: "TBH, This Is SO Awkward", author: "Lisa Greenwald", series: "Book 1 of 8", cover: "book 23.jpg",
