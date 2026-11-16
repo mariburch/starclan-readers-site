@@ -6,8 +6,6 @@
   var BOOKS = [
     { title: "Amari and the Night Brothers", author: "B.B. Alston", series: "Book 1 of 5", cover: "book 4.jpg",
       synopsis: "Thirteen-year-old Amari Peters discovers a secret world of magic and monsters while searching for her missing brother, joining the Bureau of Supernatural Affairs." },
-    { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", series: "Book 1 of 6", cover: "book 5.jpg",
-      synopsis: "Minutes before Earth is demolished for a hyperspace bypass, Arthur Dent is rescued by his friend Ford Prefect, a secret alien researcher, beginning a wild galactic adventure." },
     { title: "The Lion of Mars", author: "Jennifer L. Holm", series: "Standalone", cover: "book 8.jpg",
       synopsis: "Eleven-year-old Bell has lived his whole life in an isolated US colony on Mars. When a mysterious virus incapacitates all the adults, Bell and the other kids must break rules, contact foreign settlements, and unite to save their community." },
     { title: "The Lost Library", author: "Rebecca Stead & Wendy Mass", series: "Standalone", cover: "book 9.jpg",
